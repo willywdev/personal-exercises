@@ -124,11 +124,11 @@ const pixelValues = [
 
 const canvas = document.querySelector('[data-js="canvas"]');
 
-for (const key in pixelValues) {
-  for (const colors in pixelValues[key]) {
+for (const key of pixelValues) {
+  for (const color of key) {
     const newPixel = document.createElement("div");
     newPixel.classList.add("pixel");
-    newPixel.style.backgroundColor = pixelValues[key][colors];
+    newPixel.style.backgroundColor = color;
     canvas.append(newPixel);
   }
 }
