@@ -14,13 +14,16 @@ function renderStars(filledStars) {
       counter++;
       console.log(counter < filledStars);
       console.log(filledStars);
-      img.src = "/js-loops_stars/assets/star-filled.svg";
+      img.src = "/assets/star-filled.svg";
     } else {
-      img.src = "/js-loops_stars/assets/star-empty.svg";
+      img.src = "/assets/star-empty.svg";
     }
     starContainer.append(img);
+    img.addEventListener("click", () => {
+      img.src = "assets/star-filled.svg";
+    });
   }
   //--^-- your code here --^--
 }
 
-renderStars(2);
+renderStars();
