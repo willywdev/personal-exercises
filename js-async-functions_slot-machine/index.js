@@ -25,22 +25,10 @@ spinButton.addEventListener("click", async () => {
   spinButton.disabled = true;
   try {
     result.setSpinning();
-
-    const symbols = await Promise.all([
-      wheel1.spin(),
-      wheel2.spin(),
-      wheel3.spin(),
-    ]);
-
-    const newPoints = await getMaxCount(symbols);
-
-    if (newPoints === 3) {
-      result.setResult(100);
-    } else if (newPoints === 2) {
-      result.setResult(10);
-    } else if (newPoints === 1) {
-      result.setResult(0);
-    }
+    const symbols = [wheel1.spin(), wheel2.spin(), wheel3.spin()];
+    const spinResult = await Promise.all(symbols);
+    const newPoints = getMaxCount(spinResult);
+    result.setResult(newPoints === 3 ? 100 : newPoints === 2 ? 10 : 0);
   } catch (error) {
     result.setMachineChoked();
     console.log(error);
