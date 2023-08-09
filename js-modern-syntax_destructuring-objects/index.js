@@ -10,7 +10,7 @@ const company = {
   location: "Hamburg",
 };
 
-const { course } = company;
+export const { course } = company;
 
 // example: export const {value1} = myObject;
 
@@ -22,7 +22,7 @@ const { course } = company;
 //  2.3: 'isAdmin' property into the variable 'isAdmin' (false, if no such property exists)
 
 const user = { name: "John", years: 30 };
-const { name, years: age, isAdmin = false } = user;
+export const { name, years: age, isAdmin = false } = user;
 
 // EXERCISE 3
 // Extract the variables from the dog object and
@@ -33,7 +33,7 @@ const dog = {
   breed: "husky",
   age: 5,
 };
-const { name: dogName, breed: dogBreed, age: dogAge } = dog;
+export const { name: dogName, breed: dogBreed, age: dogAge } = dog;
 
 // EXERCISE 4
 // Extract the 'lastName' property from the person object as "personLastName".
@@ -45,4 +45,4 @@ const person = {
   firstName: "Alex",
 };
 
-const { lastName: personLastname, ...moreInformation } = person;
+export const { lastName: personLastName, ...moreInformation } = person;
