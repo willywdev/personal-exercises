@@ -8,8 +8,8 @@ export default function Volumes() {
   }
 
   function handleClick() {
-    const newSlug = getRandomElement(volumes).slug;
-    Router.push(`/volumes/${newSlug}`);
+    const randomSlug = getRandomElement(volumes).slug;
+    Router.push(`/volumes/${randomSlug}`);
   }
 
   return (
@@ -23,7 +23,9 @@ export default function Volumes() {
           </Link>
         ))}
       </ul>
-      <button onClick={handleClick}>Im feeling lucky today</button>
+      <button type="button" onClick={handleClick}>
+        Im feeling lucky today
+      </button>
     </>
   );
 }
