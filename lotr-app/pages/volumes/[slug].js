@@ -14,7 +14,7 @@ export default function VolumeDetail() {
       <Head>
         <title>{currentVolume.title}</title>
       </Head>
-      <Link href="/volumes">← All Volumes</Link>
+      <Link href="/">← All Volumes</Link>
       <h1>{currentVolume.title}</h1>
       <p>{currentVolume.description}</p>
       <ul>

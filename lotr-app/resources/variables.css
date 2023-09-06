@@ -1,35 +1,11 @@
-import { Lora } from "next/font/google";
-import { createGlobalStyle } from "styled-components";
-const lora = Lora({
-  subsets: ["latin"],
-});
-
-export default createGlobalStyle`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 7%;
-    background-color: var(--color-earth);
-    color: var(--color-clouds);
-  }
-
-  a {
-    all: unset;
-    cursor:pointer;
-  }
-
-  :root {
+:root {
   /* Color styles */
   --color-earth: #282828;
   --color-clouds: #f1f1f1;
   --color-smoke: #d4d1cd;
 
   /* Font styles */
-  --font-family: ${lora.style.fontFamily};
+  --font-family: serif;
   /*
     use like:
     font: var(--font-body);
@@ -54,4 +30,3 @@ export default createGlobalStyle`
     0 8px 7px -4px rgba(0, 0, 0, 0.09), 0 17px 11px -8px rgba(0, 0, 0, 0.09),
     0 24px 15px -12px rgba(0, 0, 0, 0.09), 0 4px 15px 0 rgba(0, 0, 0, 0.05);
 }
-`;
