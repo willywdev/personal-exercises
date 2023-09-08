@@ -72,6 +72,7 @@ export default function App({ Component, pageProps }) {
           light.isOn = false;
         })
       );
+      setIsDimmed(true);
     } else if (!allOff) {
       setIsOn(
         allLights.map((light) => {

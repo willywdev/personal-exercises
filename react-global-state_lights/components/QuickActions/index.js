@@ -8,7 +8,6 @@ const StyledQuickActions = styled.div`
 `;
 
 export default function QuickActions({ handleAction }) {
-  console.log(handleAction);
   return (
     <StyledQuickActions>
       <Button
